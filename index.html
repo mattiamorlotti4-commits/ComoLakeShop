@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lake of Como Shop</title>
+<meta name="description" content="Abbigliamento e souvenir di design ispirati al Lago di Como. Spedizione internazionale.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#home"><img src="images/logo.png" alt="Lake of Como Shop" class="nav-logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="#home" data-i18n="nav.home">Home</a></li>
+    <li><a href="#prodotti" data-i18n="nav.prodotti">Prodotti</a></li>
+    <li><a href="#storia" data-i18n="nav.brand">Il Brand</a></li>
+    <li><a href="#negozi" class="b2b" data-i18n="nav.negozi">Per i Negozi</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-switch" id="langSwitch" aria-label="Cambia lingua / Change language">
+      <span class="lang-opt active" data-lang="it">IT</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="en">EN</span>
+    </button>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" data-i18n="nav.home">Home</a>
+  <a href="#prodotti" data-i18n="nav.prodotti">Prodotti</a>
+  <a href="#storia" data-i18n="nav.brand">Il Brand</a>
+  <a href="#negozi" class="b2b" data-i18n="nav.negozi">Per i Negozi</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-shimmer"></div>
+  <div class="hero-gradient"></div>
+
+  <div class="hero-content">
+    <h1 class="sr-only">Lake of Como Shop</h1>
+
+    <div class="hero-emblem">
+      <img src="images/logo.png" alt="Lake of Como Shop" class="hero-logo-img">
+    </div>
+
+    <p class="hero-sub" data-i18n="hero.sub">Abbigliamento e souvenir ispirati al Lago di Como.</p>
+    <div class="hero-ctas">
+      <a href="#prodotti" class="btn btn-primary" data-i18n="hero.cta1">Scopri la Collezione</a>
+      <a href="#negozi" class="btn btn-outline" data-i18n="hero.cta2">Sei un Negozio? &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num">5</div>
+      <div class="stat-label" data-i18n="stats.s1">Design Originali</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">50+</div>
+      <div class="stat-label" data-i18n="stats.s2">Prodotti Disponibili</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100%</div>
+      <div class="stat-label" data-i18n="stats.s3">Print on Demand</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">&#127758;</div>
+      <div class="stat-label" data-i18n="stats.s4">Spedizione Globale</div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section id="prodotti">
+  <div class="container">
+    <div class="products-header">
+      <p class="section-eyebrow" data-i18n="products.eyebrow">La Collezione</p>
+      <h2 class="section-title" data-i18n="products.title">I Nostri <em>Design</em></h2>
+      <div class="divider-line centered"></div>
+      <p class="section-sub" data-i18n="products.sub">Un design per ogni borgo del lago, disponibile su decine di prodotti su Redbubble.</p>
+    </div>
+
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="images/products/bellagio.jpg" alt="Design Bellagio, Lake of Como">
+        </div>
+        <div class="product-info">
+          <p class="product-category" data-i18n="products.tags">Poster &middot; T-Shirt &middot; Felpa &middot; Tazza &middot; Adesivo</p>
+          <h4 class="product-name">Bellagio, Lake of Como</h4>
+          <p class="product-desc" data-i18n="products.bellagio.desc">La perla del lago, in stile vintage travel poster.</p>
+          <a href="https://www.redbubble.com/i/hoodie/Bellagio-Lake-of-Como-by-LakeComoShop/174738793/2j5j" target="_blank" rel="noopener" class="product-btn" data-i18n="products.buy">Acquista su Redbubble &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="images/products/como.jpg" alt="Design Lake of Como">
+        </div>
+        <div class="product-info">
+          <p class="product-category" data-i18n="products.tags">Poster &middot; T-Shirt &middot; Felpa &middot; Tazza &middot; Adesivo</p>
+          <h4 class="product-name">Lake of Como</h4>
+          <p class="product-desc" data-i18n="products.como.desc">Il panorama classico del lago, stile vintage-travel.</p>
+          <a href="https://www.redbubble.com/i/mug/Lake-of-Como-by-LakeComoShop/174739066/7yqg" target="_blank" rel="noopener" class="product-btn" data-i18n="products.buy">Acquista su Redbubble &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="images/products/lecco.jpg" alt="Design Lecco, Lake of Como">
+        </div>
+        <div class="product-info">
+          <p class="product-category" data-i18n="products.tags">Poster &middot; T-Shirt &middot; Felpa &middot; Tazza &middot; Adesivo</p>
+          <h4 class="product-name">Lecco, Lake of Como</h4>
+          <p class="product-desc" data-i18n="products.lecco.desc">Il porto di Lecco tra montagne e barche a vela.</p>
+          <a href="https://www.redbubble.com/i/t-shirt/Lecco-Lake-Como-by-LakeComoShop/174736023/lrcw" target="_blank" rel="noopener" class="product-btn" data-i18n="products.buy">Acquista su Redbubble &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="images/products/varenna.jpg" alt="Design Varenna, Lake of Como">
+        </div>
+        <div class="product-info">
+          <p class="product-category" data-i18n="products.tags">Poster &middot; T-Shirt &middot; Felpa &middot; Tazza &middot; Adesivo</p>
+          <h4 class="product-name">Varenna, Lake of Como</h4>
+          <p class="product-desc" data-i18n="products.varenna.desc">Giardini fioriti e scalinate sull'acqua a Villa Monastero.</p>
+          <a href="https://www.redbubble.com/i/t-shirt/Varenna-Lake-of-Como-by-LakeComoShop/174737831/xcmg" target="_blank" rel="noopener" class="product-btn" data-i18n="products.buy">Acquista su Redbubble &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="images/products/nesso.jpg" alt="Design Nesso, Lake of Como">
+        </div>
+        <div class="product-info">
+          <p class="product-category" data-i18n="products.tags">Poster &middot; T-Shirt &middot; Felpa &middot; Tazza &middot; Adesivo</p>
+          <h4 class="product-name">Nesso, Lake of Como</h4>
+          <p class="product-desc" data-i18n="products.nesso.desc">Il borgo nascosto con ponte in pietra e cascata.</p>
+          <a href="https://www.redbubble.com/i/sticker/Nesso-Lake-of-Como-by-LakeComoShop/174738379/r3lj" target="_blank" rel="noopener" class="product-btn" data-i18n="products.buy">Acquista su Redbubble &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cat-footer">
+      <a href="https://www.redbubble.com/people/lakecomoshop/shop" target="_blank" rel="noopener" class="btn btn-grad-outline" data-i18n="products.viewall">Vedi tutto lo Shop su Redbubble &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- STORIA -->
+<section id="storia">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-img-wrap">
+        <img src="images/story/porto.jpg" alt="Porto di Varenna, Lago di Como">
+        <div class="story-img-overlay"></div>
+        <p class="story-img-quote" data-i18n="story.quote">&ldquo;Il lago non &egrave; solo acqua. &Egrave; una luce che non esiste altrove.&rdquo;</p>
+      </div>
+      <div>
+        <p class="section-eyebrow" data-i18n="story.eyebrow">Il Brand</p>
+        <h2 class="section-title" data-i18n="story.title">Nati sulle <em>rive del lago</em></h2>
+        <div class="divider-line"></div>
+        <p class="story-body" data-i18n="story.body1">LakeComoShop nasce dall'amore per uno dei paesaggi pi&ugrave; belli d'Italia: la luce del mattino, le ville storiche, i borghi sulle terrazze del lago.</p>
+        <p class="story-body" data-i18n="story.body2">Grazie al Print on Demand, ogni prodotto viene realizzato su ordine e spedito ovunque nel mondo.</p>
+        <div class="values">
+          <div class="value-row">
+            <div class="value-dot"></div>
+            <div class="value-text">
+              <strong data-i18n="story.v1.strong">Design originale</strong>
+              <span data-i18n="story.v1.span">Illustrazioni esclusive, non vendute altrove</span>
+            </div>
+          </div>
+          <div class="value-row">
+            <div class="value-dot"></div>
+            <div class="value-text">
+              <strong data-i18n="story.v2.strong">Qualit&agrave; certificata</strong>
+              <span data-i18n="story.v2.span">Materiali selezionati, stampa ad alta risoluzione</span>
+            </div>
+          </div>
+          <div class="value-row">
+            <div class="value-dot"></div>
+            <div class="value-text">
+              <strong data-i18n="story.v3.strong">Spedizione globale</strong>
+              <span data-i18n="story.v3.span">Consegniamo in tutto il mondo</span>
+            </div>
+          </div>
+        </div>
+        <a href="#prodotti" class="btn btn-primary" data-i18n="story.cta">Esplora la Collezione</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- B2B -->
+<section id="negozi">
+  <div class="container">
+    <p class="section-eyebrow" data-i18n="negozi.eyebrow">Partnership Commerciale</p>
+    <h2 class="section-title" data-i18n="negozi.title">Sei un <em>negozio locale?</em></h2>
+    <div class="divider-line"></div>
+    <p class="section-sub" data-i18n="negozi.sub">Stiamo crescendo borgo dopo borgo, di persona. Lasciaci qui i tuoi contatti: ti risponderemo noi direttamente.</p>
+    <div class="b2b-grid">
+      <div>
+        <div class="benefit">
+          <div class="benefit-num">01</div>
+          <div class="benefit-text">
+            <strong data-i18n="negozi.b1.strong">Zero stock da gestire</strong>
+            <span data-i18n="negozi.b1.span">Print on Demand: si stampa solo all'ordine, niente magazzino.</span>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-num">02</div>
+          <div class="benefit-text">
+            <strong data-i18n="negozi.b2.strong">Design esclusivo</strong>
+            <span data-i18n="negozi.b2.span">I tuoi clienti non troveranno questi design altrove.</span>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-num">03</div>
+          <div class="benefit-text">
+            <strong data-i18n="negozi.b3.strong">Personalizzazione</strong>
+            <span data-i18n="negozi.b3.span">Varianti con il nome del tuo borgo o negozio.</span>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-num">04</div>
+          <div class="benefit-text">
+            <strong data-i18n="negozi.b4.strong">Un contatto diretto</strong>
+            <span data-i18n="negozi.b4.span">Nessun portale automatico: parliamo di persona.</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-box">
+        <h3 data-i18n="negozi.form.title">Parliamoci</h3>
+        <p data-i18n="negozi.form.sub">Lascia i tuoi contatti: ti risponderemo entro qualche giorno.</p>
+        <form id="b2bForm">
+          <div class="field">
+            <label for="f-name" data-i18n="negozi.form.name">Nome e cognome</label>
+            <input type="text" placeholder="Mario Rossi" id="f-name" name="nome" required>
+          </div>
+          <div class="field">
+            <label for="f-email" data-i18n="negozi.form.email">Email</label>
+            <input type="email" placeholder="mario@negozio.it" id="f-email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="f-shop" data-i18n="negozi.form.shop">Nome del negozio</label>
+            <input type="text" placeholder="es. Boutique Varenna" id="f-shop" name="negozio">
+          </div>
+          <div class="field">
+            <label for="f-interest" data-i18n="negozi.form.interest">Tipo di interesse</label>
+            <select id="f-interest" name="interesse">
+              <option value="" data-i18n="negozi.form.select">Seleziona...</option>
+              <option data-i18n="negozi.form.opt1">Rivendita prodotti</option>
+              <option data-i18n="negozi.form.opt2">Prodotti personalizzati</option>
+              <option data-i18n="negozi.form.opt3">Entrambi</option>
+              <option data-i18n="negozi.form.opt4">Solo informazioni</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg" data-i18n="negozi.form.msg">Messaggio (opzionale)</label>
+            <textarea placeholder="Raccontaci qualcosa del tuo negozio..." id="f-msg" name="messaggio"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;text-align:center;margin-top:0.5rem" data-i18n="negozi.form.submit">Invia Richiesta</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <img src="images/logo.png" alt="Lake of Como Shop" class="footer-logo-img">
+      <p class="footer-desc" data-i18n="footer.desc">Abbigliamento e souvenir ispirati al Lago di Como. Print on demand, spedizione nel mondo.</p>
+      <div class="footer-social">
+        <a href="#" class="soc-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3.05.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.21.6 1.76 1.15.55.55.9 1.1 1.15 1.76.25.64.42 1.37.47 2.43.05 1.07.06 1.42.06 4.13s-.01 3.06-.06 4.13c-.05 1.06-.22 1.79-.47 2.43-.26.66-.6 1.21-1.15 1.76-.55.55-1.1.9-1.76 1.15-.64.25-1.37.42-2.43.47-1.07.05-1.42.06-4.12.06s-3.06-.01-4.13-.06c-1.06-.05-1.79-.22-2.43-.47-.66-.26-1.21-.6-1.76-1.15-.55-.55-.9-1.1-1.15-1.76-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.7 2 12s.01-3.05.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.21 1.15-1.76.55-.55 1.1-.9 1.76-1.15.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.3 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zm5.2-8.4a1.17 1.17 0 100-2.34 1.17 1.17 0 000 2.34z"/></svg></a>
+        <a href="#" class="soc-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer.site">Il Sito</h4>
+      <ul>
+        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+        <li><a href="#prodotti" data-i18n="nav.prodotti">Prodotti</a></li>
+        <li><a href="#storia" data-i18n="nav.brand">Il Brand</a></li>
+        <li><a href="#negozi" class="gold-link" data-i18n="nav.negozi">Per i Negozi</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer.shop">Shop</h4>
+      <ul>
+        <li><a href="https://www.redbubble.com/people/lakecomoshop/shop" target="_blank" rel="noopener">Redbubble Store</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p><span data-i18n="footer.copy">&copy;</span> <span id="year"></span> Lake of Como Shop.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
