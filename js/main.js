@@ -307,3 +307,35 @@ productModal.addEventListener("click", (e) => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && productModal.classList.contains("open")) closeProductModal();
 });
+
+const reviewsGrid = document.getElementById("reviewsGrid");
+const reviewsPrev = document.getElementById("reviewsPrev");
+const reviewsNext = document.getElementById("reviewsNext");
+
+function scrollReviews(direction) {
+  const card = reviewsGrid.querySelector(".review-card");
+  const step = card ? card.getBoundingClientRect().width + 24 : 300;
+  reviewsGrid.scrollBy({ left: direction * step, behavior: "smooth" });
+}
+reviewsPrev.addEventListener("click", () => scrollReviews(-1));
+reviewsNext.addEventListener("click", () => scrollReviews(1));
+
+let isDragging = false;
+let dragStartX = 0;
+let dragStartScroll = 0;
+
+reviewsGrid.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  reviewsGrid.classList.add("dragging");
+  dragStartX = e.pageX;
+  dragStartScroll = reviewsGrid.scrollLeft;
+});
+window.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+  e.preventDefault();
+  reviewsGrid.scrollLeft = dragStartScroll - (e.pageX - dragStartX);
+});
+window.addEventListener("mouseup", () => {
+  isDragging = false;
+  reviewsGrid.classList.remove("dragging");
+});

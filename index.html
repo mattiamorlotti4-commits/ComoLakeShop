@@ -168,7 +168,9 @@
     <p class="section-eyebrow" data-i18n="reviews.eyebrow">Testimonianze</p>
     <h2 class="section-title" data-i18n="reviews.title">Cosa dicono i <em>Clienti</em></h2>
     <div class="divider-line"></div>
-    <div class="reviews-grid">
+    <div class="reviews-carousel">
+    <button type="button" class="reviews-arrow reviews-arrow-prev" id="reviewsPrev" aria-label="Precedente">&larr;</button>
+    <div class="reviews-grid" id="reviewsGrid">
       <div class="review-card">
         <div class="stars">
           <svg class="star-svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -202,6 +204,8 @@
         <p class="review-text" data-i18n="reviews.r3.text">&ldquo;Il poster di Varenna nella mia sala &egrave; uno spettacolo. Stampa di qualit&agrave; elevatissima, arrivata in tempi perfetti.&rdquo;</p>
         <p class="review-author">Klaus B. <span data-i18n="reviews.r3.author">&middot; Monaco, DE</span></p>
       </div>
+    </div>
+    <button type="button" class="reviews-arrow reviews-arrow-next" id="reviewsNext" aria-label="Successivo">&rarr;</button>
     </div>
   </div>
 </section>
