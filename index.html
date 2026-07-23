@@ -102,7 +102,7 @@
           <p class="product-category" data-i18n="products.tags">T-Shirt &middot; Felpa &middot; Tazza &middot; Adesivo &middot; Poster e altro</p>
           <h4 class="product-name">Bellagio, Lake of Como</h4>
           <p class="product-desc" data-i18n="products.bellagio.desc">La perla del lago, in stile vintage travel poster.</p>
-          <a href="https://www.redbubble.com/shop/ap/174738793" target="_blank" rel="noopener" class="product-btn" data-i18n="products.buy">Scegli il Prodotto su Redbubble &rarr;</a>
+          <button type="button" class="product-btn" data-design="bellagio" data-i18n="products.view">Guarda i Prodotti &rarr;</button>
         </div>
       </div>
 
@@ -114,7 +114,7 @@
           <p class="product-category" data-i18n="products.tags">T-Shirt &middot; Felpa &middot; Tazza &middot; Adesivo &middot; Poster e altro</p>
           <h4 class="product-name">Lake of Como</h4>
           <p class="product-desc" data-i18n="products.como.desc">Il panorama classico del lago, stile vintage-travel.</p>
-          <a href="https://www.redbubble.com/shop/ap/174739066" target="_blank" rel="noopener" class="product-btn" data-i18n="products.buy">Scegli il Prodotto su Redbubble &rarr;</a>
+          <button type="button" class="product-btn" data-design="como" data-i18n="products.view">Guarda i Prodotti &rarr;</button>
         </div>
       </div>
 
@@ -126,7 +126,7 @@
           <p class="product-category" data-i18n="products.tags">T-Shirt &middot; Felpa &middot; Tazza &middot; Adesivo &middot; Poster e altro</p>
           <h4 class="product-name">Lecco, Lake of Como</h4>
           <p class="product-desc" data-i18n="products.lecco.desc">Il porto di Lecco tra montagne e barche a vela.</p>
-          <a href="https://www.redbubble.com/shop/ap/174736023" target="_blank" rel="noopener" class="product-btn" data-i18n="products.buy">Scegli il Prodotto su Redbubble &rarr;</a>
+          <button type="button" class="product-btn" data-design="lecco" data-i18n="products.view">Guarda i Prodotti &rarr;</button>
         </div>
       </div>
 
@@ -138,7 +138,7 @@
           <p class="product-category" data-i18n="products.tags">T-Shirt &middot; Felpa &middot; Tazza &middot; Adesivo &middot; Poster e altro</p>
           <h4 class="product-name">Varenna, Lake of Como</h4>
           <p class="product-desc" data-i18n="products.varenna.desc">Giardini fioriti e scalinate sull'acqua a Villa Monastero.</p>
-          <a href="https://www.redbubble.com/shop/ap/174737831" target="_blank" rel="noopener" class="product-btn" data-i18n="products.buy">Scegli il Prodotto su Redbubble &rarr;</a>
+          <button type="button" class="product-btn" data-design="varenna" data-i18n="products.view">Guarda i Prodotti &rarr;</button>
         </div>
       </div>
 
@@ -150,7 +150,7 @@
           <p class="product-category" data-i18n="products.tags">T-Shirt &middot; Felpa &middot; Tazza &middot; Adesivo &middot; Poster e altro</p>
           <h4 class="product-name">Nesso, Lake of Como</h4>
           <p class="product-desc" data-i18n="products.nesso.desc">Il borgo nascosto con ponte in pietra e cascata.</p>
-          <a href="https://www.redbubble.com/shop/ap/174738379" target="_blank" rel="noopener" class="product-btn" data-i18n="products.buy">Scegli il Prodotto su Redbubble &rarr;</a>
+          <button type="button" class="product-btn" data-design="nesso" data-i18n="products.view">Guarda i Prodotti &rarr;</button>
         </div>
       </div>
 
@@ -314,6 +314,46 @@
 </footer>
 
 <div class="toast" id="toast"></div>
+
+<!-- PRODUCT MODAL -->
+<div class="modal-overlay" id="productModal">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalDesignName">
+    <button type="button" class="modal-close" id="modalClose" aria-label="Chiudi">&times;</button>
+    <div class="modal-header">
+      <img id="modalImg" class="modal-img" src="" alt="">
+      <h3 id="modalDesignName" class="modal-design-name"></h3>
+    </div>
+
+    <div class="modal-cat">
+      <div class="modal-cat-head">
+        <span class="modal-cat-title" data-i18n="modal.cat1.title">Indossa il Lago &mdash; T-Shirt</span>
+        <span class="cat-store-badge badge-tee">TeePublic</span>
+      </div>
+      <a id="modalTshirt" href="#" target="_blank" rel="noopener" class="btn btn-primary modal-btn" data-i18n="modal.tshirt.btn">Acquista la T-Shirt &rarr;</a>
+    </div>
+
+    <div class="modal-cat">
+      <div class="modal-cat-head">
+        <span class="modal-cat-title" data-i18n="modal.cat2.title">Il Lago in Casa Tua &mdash; Art Print</span>
+        <span class="cat-store-badge badge-red">Redbubble</span>
+      </div>
+      <a id="modalPoster" href="#" target="_blank" rel="noopener" class="btn modal-btn" style="background:linear-gradient(135deg,#c0392b,#e74c3c);color:white" data-i18n="modal.poster.btn">Acquista il Poster &rarr;</a>
+    </div>
+
+    <div class="modal-cat">
+      <div class="modal-cat-head">
+        <span class="modal-cat-title" data-i18n="modal.cat3.title">Il Ricordo Perfetto &mdash; Accessori</span>
+        <span class="cat-store-badge badge-tee">TeePublic</span>
+      </div>
+      <div class="modal-accessories">
+        <a href="https://www.teepublic.com/user/lakecomoshop/totes" target="_blank" rel="noopener" class="btn btn-grad-outline modal-btn-sm" data-i18n="modal.acc.tote">Tote Bag</a>
+        <a href="https://www.teepublic.com/user/lakecomoshop/mug" target="_blank" rel="noopener" class="btn btn-grad-outline modal-btn-sm" data-i18n="modal.acc.mug">Mug</a>
+        <a href="https://www.teepublic.com/user/lakecomoshop/phone-case" target="_blank" rel="noopener" class="btn btn-grad-outline modal-btn-sm" data-i18n="modal.acc.case">Cover</a>
+        <a href="https://www.teepublic.com/user/lakecomoshop/stickers" target="_blank" rel="noopener" class="btn btn-grad-outline modal-btn-sm" data-i18n="modal.acc.sticker">Sticker</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 </body>

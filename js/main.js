@@ -18,8 +18,17 @@ const translations = {
     "products.title": "I Nostri <em>Design</em>",
     "products.sub": "Un design per ogni borgo del lago. Scegli tu su cosa stamparlo: maglietta, felpa, tazza, poster e molto altro.",
     "products.tags": "T-Shirt &middot; Felpa &middot; Tazza &middot; Adesivo &middot; Poster e altro",
-    "products.buy": "Scegli il Prodotto su Redbubble &rarr;",
+    "products.view": "Guarda i Prodotti &rarr;",
     "products.viewall": "Vedi tutto lo Shop su Redbubble &rarr;",
+    "modal.cat1.title": "Indossa il Lago &mdash; T-Shirt",
+    "modal.tshirt.btn": "Acquista la T-Shirt &rarr;",
+    "modal.cat2.title": "Il Lago in Casa Tua &mdash; Art Print",
+    "modal.poster.btn": "Acquista il Poster &rarr;",
+    "modal.cat3.title": "Il Ricordo Perfetto &mdash; Accessori",
+    "modal.acc.tote": "Tote Bag",
+    "modal.acc.mug": "Mug",
+    "modal.acc.case": "Cover",
+    "modal.acc.sticker": "Sticker",
     "products.bellagio.desc": "La perla del lago, in stile vintage travel poster.",
     "products.como.desc": "Il panorama classico del lago, stile vintage-travel.",
     "products.lecco.desc": "Il porto di Lecco tra montagne e barche a vela.",
@@ -83,8 +92,17 @@ const translations = {
     "products.title": "Our <em>Designs</em>",
     "products.sub": "One design for every village on the lake. Pick what to print it on: t-shirt, hoodie, mug, poster and more.",
     "products.tags": "T-Shirt &middot; Hoodie &middot; Mug &middot; Sticker &middot; Poster & more",
-    "products.buy": "Choose Your Product on Redbubble &rarr;",
+    "products.view": "View Products &rarr;",
     "products.viewall": "See the Full Shop on Redbubble &rarr;",
+    "modal.cat1.title": "Wear the Lake &mdash; T-Shirt",
+    "modal.tshirt.btn": "Buy the T-Shirt &rarr;",
+    "modal.cat2.title": "The Lake at Home &mdash; Art Print",
+    "modal.poster.btn": "Buy the Poster &rarr;",
+    "modal.cat3.title": "The Perfect Souvenir &mdash; Accessories",
+    "modal.acc.tote": "Tote Bag",
+    "modal.acc.mug": "Mug",
+    "modal.acc.case": "Phone Case",
+    "modal.acc.sticker": "Sticker",
     "products.bellagio.desc": "The pearl of the lake, in vintage travel-poster style.",
     "products.como.desc": "The classic view of the lake, vintage-travel style.",
     "products.lecco.desc": "Lecco's harbour between mountains and sailboats.",
@@ -131,6 +149,39 @@ const translations = {
     "footer.shop": "Shop",
     "footer.copy": "&copy;",
     "toast.form": "Your email client is opening to send us the request."
+  }
+};
+
+const productData = {
+  bellagio: {
+    name: "Bellagio, Lake of Como",
+    img: "images/products/bellagio.jpg",
+    tshirt: "https://www.teepublic.com/t-shirt/81369930-bellagio-lake-of-como?store_id=4138214",
+    poster: "https://www.redbubble.com/shop/ap/174738793"
+  },
+  como: {
+    name: "Lake of Como",
+    img: "images/products/como.jpg",
+    tshirt: "https://www.teepublic.com/t-shirt/81369570-lake-of-como?store_id=4138214",
+    poster: "https://www.redbubble.com/shop/ap/174739066"
+  },
+  lecco: {
+    name: "Lecco, Lake of Como",
+    img: "images/products/lecco.jpg",
+    tshirt: "https://www.teepublic.com/t-shirt/81407424-lecco-lake-of-como?store_id=4138214",
+    poster: "https://www.redbubble.com/shop/ap/174736023"
+  },
+  varenna: {
+    name: "Varenna, Lake of Como",
+    img: "images/products/varenna.jpg",
+    tshirt: "https://www.teepublic.com/t-shirt/81409320-varenna-lake-of-como?store_id=4138214",
+    poster: "https://www.redbubble.com/shop/ap/174737831"
+  },
+  nesso: {
+    name: "Nesso, Lake of Como",
+    img: "images/products/nesso.jpg",
+    tshirt: "https://www.teepublic.com/t-shirt/81370238-nesso-lake-of-como?store_id=4138214",
+    poster: "https://www.redbubble.com/shop/ap/174738379"
   }
 };
 
@@ -200,4 +251,39 @@ b2bForm.addEventListener("submit", (e) => {
   window.location.href = mailtoUrl;
 
   showToast(translations[currentLang]["toast.form"]);
+});
+
+const productModal = document.getElementById("productModal");
+const modalImg = document.getElementById("modalImg");
+const modalDesignName = document.getElementById("modalDesignName");
+const modalTshirt = document.getElementById("modalTshirt");
+const modalPoster = document.getElementById("modalPoster");
+
+function openProductModal(designKey) {
+  const data = productData[designKey];
+  if (!data) return;
+  modalImg.src = data.img;
+  modalImg.alt = data.name;
+  modalDesignName.textContent = data.name;
+  modalTshirt.href = data.tshirt;
+  modalPoster.href = data.poster;
+  productModal.classList.add("open");
+}
+
+function closeProductModal() {
+  productModal.classList.remove("open");
+}
+
+document.querySelectorAll(".product-btn[data-design]").forEach((btn) => {
+  btn.addEventListener("click", () => openProductModal(btn.getAttribute("data-design")));
+});
+
+document.getElementById("modalClose").addEventListener("click", closeProductModal);
+
+productModal.addEventListener("click", (e) => {
+  if (e.target === productModal) closeProductModal();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && productModal.classList.contains("open")) closeProductModal();
 });
