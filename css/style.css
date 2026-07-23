@@ -233,6 +233,7 @@ section{padding:5.5rem 6%}
 .modal-cat-head{display:flex;align-items:center;justify-content:space-between;gap:0.8rem;margin-bottom:0.8rem}
 .modal-cat-title{font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--blue-dark)}
 .modal-btn{display:block;width:100%;text-align:center;text-decoration:none;padding:0.75rem 1rem;border-radius:2px;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase}
+.modal-preview-img{display:block;width:100%;max-width:180px;margin:0 auto 0.9rem;border-radius:3px;box-shadow:0 8px 24px rgba(10,42,74,0.15)}
 .modal-accessories{display:grid;grid-template-columns:repeat(2,1fr);gap:0.6rem}
 .modal-btn-sm{
   text-align:center;text-decoration:none;padding:0.6rem 0.5rem;border-radius:2px;
@@ -244,6 +245,16 @@ section{padding:5.5rem 6%}
 }
 
 .cat-footer{text-align:center;margin-top:2.5rem}
+
+/* REVIEWS */
+#testimonianze{background:var(--ivory)}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.5rem;margin-top:3rem}
+.review-card{background:white;border:1px solid rgba(10,42,74,0.08);border-radius:3px;padding:2rem}
+.stars{display:flex;gap:3px;margin-bottom:1rem}
+.star-svg{width:13px;height:13px;fill:var(--gold)}
+.review-text{font-family:'Playfair Display',serif;font-size:0.95rem;font-style:italic;color:var(--blue-dark);line-height:1.65;margin-bottom:1.2rem}
+.review-author{font-size:0.67rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray-text)}
+.review-author span{color:var(--blue-light);font-weight:400;text-transform:none;letter-spacing:0}
 
 /* STORY */
 #storia{background:white}

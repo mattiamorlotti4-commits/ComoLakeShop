@@ -74,7 +74,15 @@ const translations = {
     "footer.site": "Il Sito",
     "footer.shop": "Shop",
     "footer.copy": "&copy;",
-    "toast.form": "Si sta aprendo il tuo client email per inviarci la richiesta."
+    "toast.form": "Si sta aprendo il tuo client email per inviarci la richiesta.",
+    "reviews.eyebrow": "Testimonianze",
+    "reviews.title": "Cosa dicono i <em>Clienti</em>",
+    "reviews.r1.text": "&ldquo;Ho comprato una t-shirt come ricordo della mia visita a Como. Qualit&agrave; eccellente, design unico &mdash; non si trova da nessun'altra parte.&rdquo;",
+    "reviews.r1.author": "&middot; Londra, UK",
+    "reviews.r2.text": "&ldquo;Ho proposto i prodotti nel mio negozio a Bellagio e i turisti li adorano. Design esclusivo, logistica semplicissima.&rdquo;",
+    "reviews.r2.author": "&middot; Negozio, Bellagio",
+    "reviews.r3.text": "&ldquo;Il poster di Varenna nella mia sala &egrave; uno spettacolo. Stampa di qualit&agrave; elevatissima, arrivata in tempi perfetti.&rdquo;",
+    "reviews.r3.author": "&middot; Monaco, DE"
   },
   en: {
     "nav.home": "Home",
@@ -148,7 +156,15 @@ const translations = {
     "footer.site": "Site",
     "footer.shop": "Shop",
     "footer.copy": "&copy;",
-    "toast.form": "Your email client is opening to send us the request."
+    "toast.form": "Your email client is opening to send us the request.",
+    "reviews.eyebrow": "Testimonials",
+    "reviews.title": "What Our <em>Customers</em> Say",
+    "reviews.r1.text": "&ldquo;I bought a t-shirt as a souvenir of my visit to Como. Excellent quality, unique design &mdash; you won't find it anywhere else.&rdquo;",
+    "reviews.r1.author": "&middot; London, UK",
+    "reviews.r2.text": "&ldquo;I introduced the products in my shop in Bellagio and tourists love them. Exclusive design, super simple logistics.&rdquo;",
+    "reviews.r2.author": "&middot; Shop owner, Bellagio",
+    "reviews.r3.text": "&ldquo;The Varenna poster in my living room is stunning. Extremely high print quality, arrived right on time.&rdquo;",
+    "reviews.r3.author": "&middot; Munich, DE"
   }
 };
 
@@ -156,30 +172,35 @@ const productData = {
   bellagio: {
     name: "Bellagio, Lake of Como",
     img: "images/products/bellagio.jpg",
+    tshirtImg: "images/mockups/bellagio_tshirt.jpg",
     tshirt: "https://www.teepublic.com/t-shirt/81369930-bellagio-lake-of-como?store_id=4138214",
     poster: "https://www.redbubble.com/shop/ap/174738793"
   },
   como: {
     name: "Lake of Como",
     img: "images/products/como.jpg",
+    tshirtImg: "images/mockups/como_tshirt.jpg",
     tshirt: "https://www.teepublic.com/t-shirt/81369570-lake-of-como?store_id=4138214",
     poster: "https://www.redbubble.com/shop/ap/174739066"
   },
   lecco: {
     name: "Lecco, Lake of Como",
     img: "images/products/lecco.jpg",
+    tshirtImg: "images/mockups/lecco_tshirt.jpg",
     tshirt: "https://www.teepublic.com/t-shirt/81407424-lecco-lake-of-como?store_id=4138214",
     poster: "https://www.redbubble.com/shop/ap/174736023"
   },
   varenna: {
     name: "Varenna, Lake of Como",
     img: "images/products/varenna.jpg",
+    tshirtImg: "images/mockups/varenna_tshirt.jpg",
     tshirt: "https://www.teepublic.com/t-shirt/81409320-varenna-lake-of-como?store_id=4138214",
     poster: "https://www.redbubble.com/shop/ap/174737831"
   },
   nesso: {
     name: "Nesso, Lake of Como",
     img: "images/products/nesso.jpg",
+    tshirtImg: "images/mockups/nesso_tshirt.jpg",
     tshirt: "https://www.teepublic.com/t-shirt/81370238-nesso-lake-of-como?store_id=4138214",
     poster: "https://www.redbubble.com/shop/ap/174738379"
   }
@@ -258,6 +279,7 @@ const modalImg = document.getElementById("modalImg");
 const modalDesignName = document.getElementById("modalDesignName");
 const modalTshirt = document.getElementById("modalTshirt");
 const modalPoster = document.getElementById("modalPoster");
+const modalTshirtImg = document.getElementById("modalTshirtImg");
 
 function openProductModal(designKey) {
   const data = productData[designKey];
@@ -265,6 +287,8 @@ function openProductModal(designKey) {
   modalImg.src = data.img;
   modalImg.alt = data.name;
   modalDesignName.textContent = data.name;
+  modalTshirtImg.src = data.tshirtImg;
+  modalTshirtImg.alt = data.name + " T-Shirt";
   modalTshirt.href = data.tshirt;
   modalPoster.href = data.poster;
   productModal.classList.add("open");
