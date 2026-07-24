@@ -248,7 +248,15 @@ section{padding:5.5rem 6%}
 .cat-footer{text-align:center;margin-top:2.5rem}
 
 /* REVIEWS */
-#testimonianze{background:var(--ivory)}
+#testimonianze{
+  background:linear-gradient(180deg, #eaf6fb 0%, #dcedf5 100%);
+  padding-top:6.5rem;padding-bottom:6.5rem;
+  position:relative;
+}
+#testimonianze::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:var(--grad);
+}
 .reviews-carousel{position:relative;display:flex;align-items:center;gap:0.8rem;margin-top:3rem}
 .reviews-grid{
   display:flex;gap:1.5rem;padding-bottom:1.2rem;flex:1;min-width:0;
