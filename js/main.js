@@ -1,5 +1,4 @@
-// TODO: sostituisci con l'indirizzo email reale del brand (o con l'endpoint Formspree quando sara' attivo)
-const B2B_CONTACT_EMAIL = "info@lakecomoshop.com";
+const B2B_CONTACT_EMAIL = "infolakecomoshop@gmail.com";
 
 const translations = {
   it: {
