@@ -347,6 +347,8 @@ footer{background:#071e36;padding:4rem 6% 2rem}
 }
 .footer-logo-img{width:90px;height:90px;object-fit:cover;border-radius:50%;border:1.5px solid rgba(255,255,255,0.2);margin-bottom:1rem}
 .footer-desc{font-size:0.8rem;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.85;max-width:280px;margin-bottom:1.5rem}
+.footer-email{display:inline-block;font-size:0.8rem;font-weight:400;color:var(--cyan);text-decoration:none;margin-bottom:1.5rem}
+.footer-email:hover{text-decoration:underline}
 .footer-social{display:flex;gap:0.7rem}
 .soc-btn{
   width:34px;height:34px;border-radius:2px;border:1px solid rgba(255,255,255,0.15);
